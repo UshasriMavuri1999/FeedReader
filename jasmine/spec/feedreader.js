@@ -21,7 +21,7 @@ $(function() {
      * allFeeds in app.js to be an empty array and refresh the
      * page?
      */
-    it('variables defined', function() {
+    it('are defined', function() {
       expect(allFeeds).toBeDefined();
       expect(allFeeds.length).not.toBe(0);
     });
@@ -43,9 +43,9 @@ $(function() {
      * and that the name is not empty.
      */
     it('name defined', function() {
-      for (var feed = 0; feed < allFeeds.length; feed++) {
-        expect(feed).toBeDefined();
-        expect(feed.name).not.toBe('');
+      for (var i = 0; i < allFeeds.length; i++) {
+        expect(allFeeds[i].name).toBeTruthy();
+        // expect(allFeeds[i].length).not.toBe('');
       }
     });
   });
@@ -61,8 +61,8 @@ $(function() {
      * hiding/showing of the menu element.
      */
     it('menu hidden by default', function() {
-      menuitem = document.querySelector('body').classList;
-      expect(menuitem.contains('menu-hidden')).toBe(true);
+      menuitem = document.querySelector('body');
+      expect(menuitem.classList.contains('menu-hidden')).toBeTruthy();
     });
 
 
@@ -97,17 +97,21 @@ $(function() {
      * the use of Jasmine's beforeEach and asynchronous done() function.
      */
     it('LoadFeed is called', function() {
-      expect($('.feed .entry').length).toBeGreaterThan(0);
+      expect($('.feed .entry').length).not.toBe(0);
     });
 
   });
   /* added a new test suite named "New Feed Selection" */
   describe('New Feed Selection', function() {
     let feedselection;
+    var updatingfeedselection;
     beforeEach(function(done) {
       loadFeed(0, function() {
         feedselection = $('.feed').html();
-        loadFeed(1, done());
+        loadFeed(1, function(){
+           updatingfeedselection = $('.feed').html();
+          done();
+        });
       });
     });
 
@@ -117,8 +121,7 @@ $(function() {
      * Remember, loadFeed() is asynchronous.
      */
     it('new feed is loaded', function() {
-      let updatingfeedselection = $('.feed').html();
-      expect(feedselection).toBeTruthy(updatingfeedselection);
+      expect(feedselection).not.toBe(updatingfeedselection);
     });
   });
 }());
