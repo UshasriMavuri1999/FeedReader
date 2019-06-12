@@ -1,21 +1,24 @@
-# Feed Reader
+# FEED READER
+## Table of Contents:
+-   [Over View](#Over-View)
+-   [Instructions](#Instructions)
+-   [Why this Project](#Why-this-project)
+-   [How to Run](#How-to-Run)
+-   [What will I learn](#What-will-I-learn)
+-   [How I built](#How-I-built)
+-   [How will this help my career](#How-will-this-help-my-career)
+-   [Development Strategy](#Development-Strategy)
+-   [Contributing](#Contributing)
+## Over View
 
 In this project you are given a web-based application that reads RSS feeds. The original developer of this application clearly saw the value in testing, they've already included [Jasmine](http://jasmine.github.io/) and even started writing their first test suite! Unfortunately, they decided to move on to start their own company and we're now left with an application with an incomplete test suite. That's where you come in.
 
-## Table of Contents:
 
--   [Instructions](#instructions)
--   [Why this Project](#whythisproject)
--   [How to Run](#howtorun)
--   [What will I learn](#whatwillilearn)
--   [How I built](#howibuilt)
--   [How will this help my career](#howwillthishelpmycareer)
--   [Development Strategy](#developmentstrategy)
--   [Contributing](#contributing)
 
 ## Instructions
 
 Use this [rubric](https://review.udacity.com/#!/rubrics/18/view) for self-checking your submission. Your project will be evaluated by a Udacity code reviewer according to the `Feed Reader Testing project rubric`.
+
 
 ## Why this Project?
 
@@ -29,6 +32,13 @@ You can download the starter code through either:
 
 -   feedreader project repository on GitHUB: <https://github.com/udacity/frontend-nanodegree-feedreader.git>
 -   The Zipped File : <https://github.com/udacity/frontend-nanodegree-feedreader/archive/master.zip>
+
+    After downloading the starter code open index.html in any web browser to run the project.
+    Other way to run this project:
+    * Open any webserver for chrome(200 Ok)
+    * Choose folder where you saved the project folders
+    * Copy the URL link there
+    * Now you can paste this URL link on any web browser(Chrome, opera). It redirected to index.html file
 
 ## What will I learn?
 
@@ -102,3 +112,5 @@ When you're all finished, write a `README` file detailing all steps required to 
 # Contributing
 
 This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+## Note:
+ Maintain the internet connectivity while running the project.
